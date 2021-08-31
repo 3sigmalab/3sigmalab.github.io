@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Research</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Three Sigma (3&sigma;) Lab, Research">
+      <meta name="author" content="">
+      <!-- Le styles -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+      <link href="css/theme.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container">
+         <header class="jumbotron subhead" style="color: #841617;" id="overview">
+            <p class="lead" > <img src="images/ThreeSigmaLab.jpg" width="200" height="200"  </p>
+         </header>
+         <div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <ul class="nav">
+                        <li><a href="index.html">home</a></li>
+                        <li class="active"><a href="#">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="people.html">People</a></li>
+                        <li><a href="openings.html">Open Positions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="row-fluid">
+            <div class="span3 bs-docs-sidebar" id="navparent">
+               <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
+                  <li align="justify"><a href="#statemet"> Overview </a></li>
+				  <li align="justify"><a href="#currproj"> Current Projects </a></li>
+                  <li align="justify"><a class="subhead" href="#CTE"> Detecting Protein Tau in Chronic Traumatic Encephalopathy (CTE) using Deep Learning Techniques </a></li>
+                  <li align="justify"><a href="#pastproj"> Past Projects </a></li>
+                  <li align="justify"><a class="subhead" href="#Coma"> Disambiguating Coma Etiologies by Assessing the Lability Of EEG Dynamics  </a></li>
+                  <li align="justify"><a class="subhead" href="#Seizure"> Detecting Seizure Onset by Identifying Change Points in EEG Signals </a></li>
+                  <li align="justify"><a class="subhead" href="#Aneurysm"> Detecting Brain Aneurysm Rupture using Interpretable Learning Systems </a></li>
+                  <li align="justify"><a href="#References">References</a></li>
+                  <li align="justify"><a href="#Acknowledgments">Acknowledgments</a></li>
+
+               </ul>
+            </div>
+            <div class="span8 offset1">
+               <section id="statemet">
+                  <div class="page-header">
+                     <h3>Overview</h3>
+                     <hr>
+                     <p align="justify">We are witnessing a rapid growth in the development of technology to measure processes within the brain, which in turn can be correlated with brain function and dysfunction. However, these recordings in their raw format are often difficult to interpret, and it is only after processing and transforming them that we are able to gain meaningful information about the underlying processes of the brain. The main challenge here is how to go from high dimensional recordings of brain activity to low dimensional latent variables that provide useful information about the states of the brain. At three sigma lab we are focused on the extraction of latent information from complex recordings of brain activity. The extracted information can be used by clinicians to make better decisions about patient care and enable scientists to better understand how the brain works.</div>
+               </section>
+               <section id="currproj">
+                  <div class="page-header">
+                     <h3>Current Projects</h3>
+                  </div>
+                  <div class="row-fluid">
+                     <div class="span12">
+                        <section id="CTE">
+                           <h4>Detecting Protein Tau in Chronic Traumatic Encephalopathy (CTE) using Deep Learning Techniques:</h4>
+                           <br/>
+                           <img src="images/Framework_CTE.png" class="float-right" />
+                           <p align="justify">
+CTE is characterized by a slow spread of protein Tau throughout the brain, but its progression can only be detected by post-mortem examination. Hence, there is a large interest in developing in vivo CTE diagnosis methods using imaging biomarkers. In this study, we aim at using deep learning techniques to step towards developing such diagnosis method. More specifically, using co-registered histology to MRI scans of ex vivo human brain tissue blocks with a confirmed neuropathological diagnosis of CTE, we want to devise customized deep learning method to detect regionality and degree of pathology. The ultimate goal is to develop a fully automated framework for detecting P-tau.
+                           </p>
+                        </section>
+                      </div>
+                  </div>
+               </section>                       
+                        <hr>                        
+						<section id="pastproj">
+                  <div class="page-header">
+                     <h3>Past Projects</h3>
+                  </div>
+                  <div class="row-fluid">
+                     <div class="span12">
+                        <section id="Coma">
+                           <h4>Disambiguating Coma Etiologies by Assessing the Lability Of EEG Dynamics:</h4>
+                           <br/>
+                           <img src="images/Framework_INRI.png" class="float-right" />
+                           <p align="justify">
+						   	One of the key challenges in clinical neurology is the lack of a reliable quantitative measure of consciousness, which makes it difficult to assess the state of unresponsive patients such as those that are in coma. Nevertheless, a key signature of coma is the severe disruption of electrical activity in the brain, which is related to the deterioration of consciousness. We can capture the electrical activity of the brain using electroencephalogram (EEG) sensors. However, since these patients cannot interact with their surroundings, classical quantitative EEG approaches that rely on exogenous stimuli are not adequate for characterizing such disruptions of brain activity. Hence, we have developed a new method termed Intrinsic Network Reactivity Index (INRI) that aims to assess the overall lability of brain dynamics without using extrinsic stimulation. Using retrospective EEG dataset from comatose patients, we have shown that there is a nice correlation between the INRI index and the Glasgow Coma Scale (GSC) which is a standardized scale used to assess the conscious state of coma patients [1]. We further extended this approach to the Frequency Based Intrinsic Network Dynamic Reactivity (FINDR) approach, which aims to quantify the engagement of different brain regions with each other. We have shown that the FINDR values are correlated to the spatial properties (in this case location) of the brain injury [2]. 
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="Seizure">
+                           <h4>Detecting Seizure Onset by Identifying Change Points in EEG Signals:</h4>
+                           <br/>
+                           <img src="images/Framework_Seizure.png" class="float-right" />
+                           <p align="justify">
+Epilepsy is one of the most common disabling neurological conditions characterized by recurrent and unprovoked temporary electrical disturbance in the brain, known as seizures. Seizures are typically detected by visual analysis of electroencephalogram (EEG) signals performed by neurologists, but this could be automated for real-time monitoring of epilepsy patients. Unfortunately, most of the methods developed for seizure detection are computationally intensive and cannot be easily implemented in an embedded system (i.e. mobile phones). In a proof-of-concept study, we showed it is possible to use simple time domain features extracted from Electroencephalogram (EEG) signals with a distance-based classifier to detect seizure onsets with low complexity (in this case O(n<sup>2</sup>) where n represents the dimension of the dataset) [3]. Later, we extended this study and developed an adaptive seizure onset detection framework using a combination of blind signal separation methods and a change point detector to take into account the inter-patient variation of EEG signals during seizure detection [4].
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="Aneurysm">
+                           <h4>Detecting Brain Aneurysm Rupture using Interpretable Learning Systems </h4>
+                           <br/>
+                           <img src="images/Framework_GMBD.png" class="float-right" />
+                           <p align="justify">
+Among various data mining algorithms, the rule-based methods are preferred in the medical domain since they can provide simple if-then rules that help the physicians understand the logic behind classifying a patient into a specific risk category. Unfortunately, the majority of rule-induction algorithms can only handle discrete datasets, whereas most neuroimaging datasets are continuous. Hence, to take advantage of the rule-induction algorithms in continuous datasets, we proposed a new discretization method based on Gaussian Mixture Models (GMM) that effectively discretizes the continuous variables with minimum information loss [5]. We showed the proposed method can be used for predicting the risk of brain aneurysm rupture from various morphological features of blood vessels in the brain.
+                           </p>
+                        </section>
+                     </div>
+                  </div>
+               </section>
+               <hr>
+               
+               <section id="References">
+                  <div class="page-header">
+                     <h3>References</h3>
+                  </div>
+                  <div class="row-fluid">
+                     <div class="span12">
+                           <br/>
+                           <ol class="resources">
+                              <li align="justify">Khanmohammadi, Sina, Osvaldo Laurido-Soto, Lawrence N. Eisenman, Terrance T. Kummer, and ShiNung Ching. "Intrinsic network reactivity differentiates levels of consciousness in comatose patients." Clinical Neurophysiology 129, no. 11 (2018): 2296-2305.</li>
+                              <li align="justify">Khanmohammadi, Sina, Osvaldo Laurido-Soto, Lawrence N. Eisenman, Terrance T. Kummer, and ShiNung Ching. "Localizing focal brain injury via EEG spectral variance." Biomedical Signal Processing and Control 68 (2021): 102746.</li>
+                              <li align="justify">Khanmohammadi, Sina, and Chun-An Chou. "A simple distance based seizure onset detection algorithm using common spatial patterns." In International Conference on Brain Informatics, pp. 233-242. Springer, Cham, 2016.</li>
+                              <li align="justify">Khanmohammadi, Sina, and Chun-An Chou. "Adaptive seizure onset detection framework using a hybrid PCA–CSP approach." IEEE journal of biomedical and health informatics 22, no. 1 (2017): 154-160.</li>
+                              <li align="justify">Khanmohammadi, Sina, and Chun-An Chou. "A Gaussian mixture model based discretization algorithm for associative classification of medical data." Expert Systems with Applications 58 (2016): 119-129.</li>
+                           </ol>
+                        </section>
+
+
+                  
+                 <section id="Acknowledgments">
+                  <div class="page-header">
+                     <h3>Acknowledgments</h3>
+                  </div>
+                  <div class="row-fluid">
+                     <div class="span12">
+                           <br/>
+                           <ol class="resources">
+                              <img src="images/NSF.png" width="75" height="75"/>
+                              <img src="images/NIH.png" width="75" height="75"/>
+                              <img src="images/AFOSR.png" width="75" height="75"/>
+                              <img src="images/BWF.png" width="75" height="75"/>
+                              <img src="images/SUNYRF.png" width="75" height="75"/>
+                              <img src="images/BU.png" width="50" height="50"/>
+                              </ol>
+                        </section>
+                     </div>
+                  </div>                
+                 
+</section>
+
+      
+      <footer id="footer">
+         <div class="container-fluid">
+            <div class="row-fluid">
+               <div class="span5">
+                  <h3>Contact Information</h3>
+                  <p>Office Hours: </b>Monday-Friday (8.00am - 5.00pm)<br>
+                  <b>Phone: </b>(405) 325-4042<br>
+                  <a href="mailto:sinakhan@ou.edu">Email</a>
+               </div>
+               <div class="span2">
+                  <a href="https://www.ou.edu/"><img src = "images/OU logo.png" alt="research-lab-logo"/></a>
+               </div>
+               <div class="span5">
+                  <h3>Address</h3>
+                  <p>School of Computer Science<br>
+                     110 W. Boyd St.<br>
+                     Norman, OK 73019<br>
+                  </p>
+                  <a href="https://goo.gl/maps/ETAaFYqzkE1KUi7HA/">Show Map</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery-1.9.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script>
+         $(document).ready(function() {
+             $(document.body).scrollspy({
+                 target: "#navparent"
+             });
+         });
+         
+      </script>
+   </body>
+</html>
