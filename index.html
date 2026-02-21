@@ -2,79 +2,79 @@
 <html lang="en">
 <head>	
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3Sigma Lab</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="media/css/academicons.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>3Sigma Lab</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="media/css/academicons.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="index.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
 }
 
 .active, .accordion:hover {
-    background-color: #ccc;
+	background-color: #ccc;
 }
 
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
 </style>
 
 </head>
 <body>
-    <div id="loading">
-        <div id="spinner"></div>
-    </div>
-    <div id="magnify">
-        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
-        <div id="img_here"></div>
-    </div>
-    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
-        <table>
-            <tr>
-                <td id="logo"> <img src="media/logos/3SigmaLogo.png" alt="3SigmaLogo"width="100"></td>
-                <td id="navigation">
-                    <a href="#team">Team</a>
-                    <a href="#research">Research</a>
-                    <a href="#teaching">Teaching</a>
-                    <a href="#outreach">Outreach</a>
-                    <a href="#contact">Contact</a>
-                </td>
-            </tr>
-        </table>
-    </header>
+	<div id="loading">
+		<div id="spinner"></div>
+	</div>
+	<div id="magnify">
+		<h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+		<div id="img_here"></div>
+	</div>
+	<header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+		<table>
+			<tr>
+				<td id="logo"> <img src="media/logos/3SigmaLogo.png" alt="3SigmaLogo"width="100"></td>
+				<td id="navigation">
+					<a href="#bio">Team</a>
+					<a href="#research">Research</a>
+					<a href="#teaching">Teaching</a>
+					<a href="#service">Service</a>
+					<a href="#contact">Contact</a>
+				</td>
+			</tr>
+		</table>
+	</header>
  
-    <table id="top_part">
-        <tr>
-            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
-                <h1>We develop computational methods to understand human brain function using neuroimaging datasets.</h1>
-            </td>
-            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
-        </tr>
-    </table>
+	<table id="top_part">
+		<tr>
+			<td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+				<h1>We develop computational methods to understand human brain function using neuroimaging datasets.</h1>
+			</td>
+			<td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+		</tr>
+	</table>
 
-    <div id="team">
-        <h1>Team</h1>
+	<div id="bio">
+		<h1>Team</h1>
 		
 							<h2>Principal Investigator:</h2>
 		<ul>
@@ -85,6 +85,7 @@
 						  <img src="media/people/Sina_Khan.jpeg" 
 						  alt="DTE"
 							   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+						</a>
 						<p>
 						<a href="https://www.linkedin.com/in/sina-khanmohammadi-43748430"
 						   target="_blank" class="" aria-label="LinkedIn">
@@ -103,7 +104,7 @@
 </div>
 <div style="clear: both;"></div>
 </ul>
-<p style="margin-bottom:3cm;"></p>		
+<p style="margin-bottom:3cm;"></p>	
 		
 							<h2>Current Members:</h2>
 							<ul>
@@ -760,8 +761,6 @@ We thank the following organizations for sponsoring our research projects.
 <div class="span8">
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.8271269901297!2d-97.44402318475399!3d35.21077478030667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b269d4244ae647%3A0xee193280b8b016ad!2sDevon%20Energy%20Hall%2C%20Norman%2C%20OK%2073019!5e0!3m2!1sen!2sus!4v1626317871814!5m2!1sen!2sus" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>             
 </div>
-
-
 
 <script src="index.js" type="text/javascript"></script>
 </body>
