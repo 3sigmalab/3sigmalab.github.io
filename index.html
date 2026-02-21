@@ -1,219 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-	   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSBKXYVK01"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RSBKXYVK01');
+<head>	
 </script>
-      <meta charset="utf-8">
-      <title>Three Sigma (3&sigma;) Lab - Home</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Three Sigma (3&sigma;) Lab, Home">
-      <meta name="author" content="">
-      <!-- Le styles -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
-      <link rel="stylesheet" href="media/css/academicons.min.css"/>
-   </head>
-   <body>
-      <div class="container">
-         <header class="jumbotron subhead" style="color: #841617;" id="overview">
-            <p class="lead" > <img src="images/Logos/ThreeSigmaLab.jpg" width="200" height="200"  </p>
-         </header>
-         <div class="masthead">
-            <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="openings.html">Open Positions</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row-fluid">
-            <div class="span12">
-               <div id="main-carousel" class="carousel slide">
-                  <div class="carousel-inner">
-                     <div class="item active">
-                        <img src="images/Events/Lab_Photo_SP25_1.jpeg" class="carousel-image" alt="">                      
-                        <div class="carousel-caption">
-                           <h4>Three Sigma & <a href="https://bond-lab.com">BOND Lab</a> joint Graduate Lunch (Spring 25).</h4>
-                           <!-- -->
-                           <p></p>
-                        </div>
-                     </div>
- 
- <div class="item">
-     <img src="images/Events/Lab_Photo_F24_2.jpeg" class="carousel-image" alt="">
-     <div class="carousel-caption">
-        <h4>Three Sigma Lab Picnic (Fall 24).</h4>
-        <p></p>
-     </div>
-  </div>   
-  
-  
- <div class="item">
-    <img src="images/Events/Lab_Photo_F24_1.jpeg" class="carousel-image" alt="">
-    <div class="carousel-caption">
-       <h4>Three Sigma Lab Picnic (Fall 24).</h4>
-       <p></p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3Sigma Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="media/css/academicons.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
     </div>
- </div>                    
-                                          
-                      <div class="item">
-                         <img src="images/Events/Lab_Photo_SP24_3.jpeg" class="carousel-image" alt="">
-                         <div class="carousel-caption">
-                            <h4>Three Sigma Lab Bowling Tournament (Spring 24).</h4>
-                            <p></p>
-                         </div>
-                      </div>
-                     
-                     <div class="item">
-                        <img src="images/Events/Lab_Photo_SP24_2.jpeg" class="carousel-image" alt="">
-                        <div class="carousel-caption">
-                           <h4>Three Sigma Lab at OU Industry and Government Day (Spring 24).</h4>
-                           <p></p>
-                        </div>
-                     </div>
-                     
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo"> <img src="media/logos/3SigmaLogo.png" alt="3SigmaLogo"width="100"></td>
+                <td id="navigation">
+                    <a href="#team">Team</a>
+                    <a href="#research">Research</a>
+                    <a href="#teaching">Teaching</a>
+                    <a href="#outreach">Outreach</a>
+                    <a href="#contact">Contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+ 
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <h1>We develop computational methods to understand human brain function using neuroimaging datasets.</h1>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
 
-                     <div class="item">
-                         <img src="images/Events/Lab_Photo_SP24_1.jpeg" class="carousel-image" alt="">
-                         <div class="carousel-caption">
-                            <h4>Three Sigma Lab Event (Spring 24).</h4>
-                            <p></p>
-                         </div>
-                      </div>
-                      
-                                           
-                     <div class="item">
-                        <img src="images/Events/Lab_Photo_F23_1.jpeg" class="carousel-image" alt="">
-                        <div class="carousel-caption">
-                           <h4>Three Sigma Lab Members at ICCABS Conference (Fall 23).</h4>
-                           <p></p>
-                        </div>
-                     </div>
-                     
-                     <div class="item">
-                         <img src="images/Events/Lab_Photo_F23_2.jpeg" class="carousel-image" alt="">
-                         <div class="carousel-caption">
-                            <h4>Three Sigma Lab Members at ICCABS Conference (Fall 23).</h4>
-                            <p></p>
-                         </div>
-                      </div>
-                      
-                      <div class="item">
-                          <img src="images/Events/Lab_Photo_SU23_1.jpeg" class="carousel-image" alt="">
-                          <div class="carousel-caption">
-                             <h4>Lab Lunch (Summer 23).</h4>
-                             <p></p>
-                          </div>
-                       </div>
-                       
-                       
-                     <div class="item">
-                        <img src="images/Events/Lab_Photo_SP23_1.jpeg" class="carousel-image" alt="">
-                        <div class="carousel-caption">
-                           <h4>Three Sigma Lab Members (Spring 23).</h4>
-                           <p></p>
-                        </div>
-                     </div>
-                     
-                      <div class="item">
-                          <img src="images/Events/Lab_Photo_SP23_2.jpeg" class="carousel-image" alt="">
-                          <div class="carousel-caption">
-                             <h4>Three Sigma Lab Members at OU Industry Day (Spring 23).</h4>
-                             <p></p>
-                          </div>
-                       </div>
-                       
-                       <div class="item">
-                           <img src="images/Events/Lab_Photo_SP22_1.jpeg" class="carousel-image" alt="">
-                           <div class="carousel-caption">
-                              <h4>Three Sigma Lab Members at OU Industry Day (Spring 22).</h4>
-                              <p></p>
-                           </div>
-                        </div>
-                        
-                  </div>                 
-                  <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
-                  <a class="right carousel-control" href="#main-carousel" data-slide="next">›</a>
-               </div>
-            </div>
-         </div>
-         <hr>
-         <div class="container-fluid">
-            <div class="row-fluid marketing">
-               <div class="span12">
-                  <p>
-   <body>
-      <h2>Who we are?</h2>
-      <p align="justify">We are the three sigma lab at university of Oklahoma!</p>
-   </body>
-   <body>
-      <h2>What do we do?</h2>
-      <p align="justify">We are interested in using methods from data science, network science, and dynamical systems to understand how the brain functions and how does this function get disrupted in various neurological disorders.</p>
-   </body>
-      <body>
-      <h2>Why three sigma?!</h2>
-      <p align="justify">Three sigma is a statistical rule stating that for reasonably symmetric unimodal distributions, most of the data lies within three standard deviations of the mean. This predominantly simple rule has countless applications in analyzing neural data and therefore selected as the name of our lab. </p>
-   </body>   
-         <body>
-      <h2>Interested to Join us?</h2>
-      <p align="justify">We always welcome applications from motivated individuals. Please check <a href="openings.html">open positions</a> page for more details.</p>
-      <p align="justify" style="color:#FF0000"> ***We do not currently have any funded openings in the lab.*** </p>  
-         
-   </body>     
-                 
-       </div>
-                     </p>
+    <div id="team">
+        <h1>Team</h1>
+		
+							<h2>Principal Investigator:</h2>
+		<ul>
+			<div style="width:1300px;">
+				
+				<div id="container">
+					<div class="wrap" style="width:200px; left:38%; float:left; padding-bottom:10px; text-align:center;">
+						  <img src="media/people/Sina_Khan.jpeg" 
+						  alt="DTE"
+							   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+						<p>
+						<a href="https://www.linkedin.com/in/sina-khanmohammadi-43748430"
+						   target="_blank" class="" aria-label="LinkedIn">
+						  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+						</a>										
+						 Sina Khanmohammadi (FA21-)
+						 <br>
+						 <a href="https://scholar.google.com/citations?user=K6sMFj4AAAAJ&hl=en&oi=ao"
+							target="_blank" class="" aria-label="Google Scholar">
+						   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+						 </a>		
+						Assistant Professor of Computer Science</p>
+					</div>
+				</div>
+				
+</div>
+<div style="clear: both;"></div>
+</ul>
+<p style="margin-bottom:3cm;"></p>		
+		
+							<h2>Current Members:</h2>
+							<ul>
+								<div style="width:1300px;">
+									
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Steven_Wilson.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+										<p>
+										<a href="https://www.linkedin.com/in/steven-wilson-0072166"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										 Steven E. Wilson (FA21-)
+										 <br>
+										 <a href="https://scholar.google.com/citations?hl=en&user=W3IE7YgAAAAJ"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										Ph.D. Candidate in DSA</p>
+									</div>
+								</div>
+										  
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Majid_Razavi.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+										</a>
+										<p>
+										<a href="https://ir.linkedin.com/in/majid-razavi"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Seyed Majid Razavi (FA23-)
+										 <br>
+										 <a href="https://scholar.google.com/citations?hl=en&user=WY7aJqgAAAAJ"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										Ph.D. Candidate in DSA</p>
+									</div>
+								</div>										  
 
-                  <br/>
-               </div>
-            </div>
-         </div>
-      </div>
-      <footer id="footer">
-         <div class="container-fluid">
-            <div class="row-fluid">
-               <div class="span5">
-                  <h3>Contact Information</h3>
-                   <p>Office Hours: Monday-Friday (8.00am - 5.00pm)<br>
-                   Phone: (405) 325-1792<br>
-                   <a href="mailto:sinakhan@ou.edu">Email</a>
-                   </p>
-                </div>
-                <div class="span2">
-                  <a href="https://www.ou.edu/"><img src = "images/Logos/OU_Logo.png"/></a>
-               </div>
-               <div class="span5">
-                  <h3>Address</h3>
-                  <p>School of Computer Science<br>
-                     110 W. Boyd St.<br>
-                     Devon Energy Hall, Room 210-A <br>
-                     Norman, OK 73019<br>
-                  </p>
-                  <a href="https://goo.gl/maps/ETAaFYqzkE1KUi7HA/">Show Map</a>
-               </div>
-            </div>
-         </div>
-      </footer>
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Amirhossein_Arezoumand.JPG"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+										</a>
+										<p>
+										<a href="https://ir.linkedin.com/in/amirhossein-arezoomand"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Amirhossein Arezoumand (SU25-)
+										 <br>
+										 <a href="https://scholar.google.com/citations?user=K5B68YgAAAAJ&hl=en"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										Ph.D. Student in CS</p>
+									</div>
+								</div>	
+																
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Saeed_Tajik.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/saeed-tajik-h"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Saeed Tajik Hesarkuchak (SU25-)	
+										 <br>
+										 <a href="https://scholar.google.com/citations?hl=en&user=0g8fx5sAAAAJ"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										Ph.D. Student in CS</p>
+									</div>
+								</div>
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Mehdi_Zaeifi.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/mehdi-zaeifi-8963b9249"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Mehdi Zaeifi (SU25-)	
+										 <br>
+										 <a href="https://scholar.google.com/citations?hl=en&user=Ty-rrQoAAAAJ"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										Ph.D. Student in CS</p>
+									</div>
+								</div>													
+							
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Sean_Nguyen.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/sean-nguyen-b44590249"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Sean M Nguyen (SU25-)	
+										 <br>
+										 <a href="https://scholar.google.com/citations?user=Xfbr6h8AAAAJ&hl=en"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										M.Sc. Student in CS</p>
+									</div>
+								</div>	
+								
 
-      <!-- Javascript files -->
-      <script src="js/jquery-3.6.4.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script> $('#main-carousel').carousel(); </script>
-   </body>
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Place_Holder.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/henryho01"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Henri Ho (SP26-)	
+										 <br>
+										Undergraduate Student in CS</p>
+									</div>
+								</div>	
+								
+								
+</div>
+<div style="clear: both;"></div>
+</ul>
+&nbsp;
+							<h2>Alumni:</h2>
+							<ul>
+								<div style="width:1300px;">
+																		
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Triet_Tran.jpeg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/thomastran136"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Triet M. Tran (FA23-FA25)	
+										 <br>
+										 <a href="https://scholar.google.com/citations?hl=en&user=T-W28vYAAAAJ"
+											target="_blank" class="" aria-label="Google Scholar">
+										   <i class="ai ai-google-scholar" style="font-size:20px;"></i>
+										 </a>		
+										Ph.D. in DSA</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+								<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+									  <img src="media/people/Ousmane_Kone.png"
+										   alt="DTE"
+										   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+									</a>
+									<p>
+									<a href="https://www.linkedin.com/in/ouskone"
+									   target="_blank" class="" aria-label="LinkedIn">
+									  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+									</a>										
+									Ousmane Segba Kone (SU24-SP25)	
+									 <br>	
+									B.Sc. in CE</p>
+									</div>
+								</div>								
+
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Abdulmalik_Shodunke.png"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/abdulmalikshodunke"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Abdulmalik Shodunke (F24)	
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Ibrahim_Mohammad.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/brahimt2/"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Ibrahim Mohammad (F24)	
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>	
+										
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Nirwaan_Azhar.jpeg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/nirwaan-azhar-b192a11b5"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Nirwaan Azhar (SU24-FA24)	
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center;">
+										  <img src="media/people/Emma_Stubby.png"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/emma-stubby-576959290"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Emma Stubby (SP23-FA24)	
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Rachelle_Phipps.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/rachelle-s-phipps"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Rachelle S. Phipps (SU23-SP24)	
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>
+
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Thi_Tran.jpeg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/ttranng"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Thi Thuy Trang Tran (SU23-SP24)
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>									
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Michael_Yu.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/micyu"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Michael C. Yu (FA22-SP24)	
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Ahmed_Sharaf.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/ahmed-sharafeddeen"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Ahmed Sharafaldeen (SU23 - FA23)
+										 <br>	
+										B.Sc. in CS</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Connor_Behnen.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/connorbehnen"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Connor Behnen (SP22-FA23)	
+										 <br>	
+										M.Sc. in DSA</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:7%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Remington_Steele.png"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/remington-steele-57975116a"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Remington Steele (SP23-SU23)	
+										 <br>		
+										M.Sc. in DSA</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Robel_Tesfaselassie.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/robel-tesfaselassie-529499191"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Robel Tesfaselassie (FA22 - SP23)
+										 <br>	
+										B.Sc. in EE</p>
+									</div>
+								</div>	
+								
+								<div id="container">
+									<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+										  <img src="media/people/Ahmed_Abdallah_Mohamed.jpg"
+											   alt="DTE"
+											   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+										</a>
+										<p>
+										<a href="https://www.linkedin.com/in/ahmed-a-100553/"
+										   target="_blank" class="" aria-label="LinkedIn">
+										  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+										</a>										
+										Ahmed Abdallah Mohamed (SP22)
+										 <br>	
+										B.Sc. in CE</p>
+									</div>
+								</div>	
+									
+									<div id="container">
+										<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+											  <img src="media/people/Aidan_Foreman.jpg"
+												   alt="DTE"
+												   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+											</a>
+											<p>
+											<a href="https://www.linkedin.com/in/ahmed-a-100553/"
+											   target="_blank" class="" aria-label="LinkedIn">
+											  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+											</a>										
+											Aidan Foreman (SP22)
+											 <br>	
+											B.Sc. in CS</p>
+										</div>
+									</div>	
+									
+									<div id="container">
+										<div class="wrap" style="width:200px; left:0%; float:left; padding-bottom:10px; text-align:center; margin-top:50px;">
+											  <img src="media/people/Tyler_Roman.jpg"
+												   alt="DTE"
+												   style="width:100px; height:100px; border-radius:50%; object-fit:cover;"
+											</a>
+											<p>
+											<a href="https://www.linkedin.com/in/ahmed-a-100553/"
+											   target="_blank" class="" aria-label="LinkedIn">
+											  <i class="fab fa-linkedin" style="font-size:20px;"></i>
+											</a>										
+											Tyler M. Roman (SP22)
+											 <br>	
+											B.Sc. in CS</p>
+										</div>
+									</div>	
+</div>
+<div style="clear: both;"></div>
+</ul>
+&nbsp;	
+
+<h2>Open Positions:</h2>
+<p>We always welcome motivated, passionate, and hardworking students to join our lab.
+  <span style="color:red; font-weight:bold;">
+	We do not currently have any funded openings,
+  </span>
+but feel free to reach out if you are currently enrolled at OU and would like to join our lab as part of undergraduate research, a master's thesis, or Ph.D. dissertation credit.
+</p>
+	
+							
+	
+    <div id="research">
+        <h1>Research</h1>            
+               We develop data‑driven computational approaches to understand, monitor, predict, and control neural dynamics, with applications in fundamental neuroscience, clinical neurology, and translational neuroengineering.		   
+               <ul>
+			   <div style="width:1300px;">
+				   
+				   
+				 <div id="container">
+				   <div class="wrap" style="width:300px; left:5%; float:left;">
+					   <img src="media/research/Understand.png" style="width:150px; height:130px;" alt="DTE">
+					 </a>
+					 <p <span style="color:rgba(255, 0, 0, 0.8);text-align:center;">Understand</span> <br>
+					   <span style="color:rgba(0, 0, 0, 0.8);">
+						 We develop data‑driven methods to characterize the structure, organization, and underlying mechanisms of large‑scale neural dynamics.
+					   </span>
+					 </p>
+				   </div>
+				 </div>
+	
+
+					<div id="container">
+					  <div class="wrap" style="width:300px; left:5%; float:left;">
+						  <img src="media/research/Monitor.png" style="width:150px; height:130px;" alt="DTE">
+						</a>
+						<p <span style="color:rgba(255, 0, 0, 0.8);text-align:center;">Monitor</span> <br>
+						  <span style="color:rgba(0, 0, 0, 0.8);">
+							We design algorithms that can detect and track subtle changes in underlying neuronal dynamics using neuroimaging data.
+						  </span>
+						</p>
+					  </div>
+					</div>
+
+					   <div id="container">
+						 <div class="wrap" style="width:300px; left:5%; float:left;">
+							 <img src="media/research/Predict.png" style="width:150px; height:130px;" alt="DTE">
+						   </a>
+						   <p <span style="color:rgba(255, 0, 0, 0.8);text-align:center;">Predict</span> <br>
+							 <span style="color:rgba(0, 0, 0, 0.8);">
+							  We construct predictive models to forecast cognitive outcomes and predict pathological events using features derived from neural dynamics.
+							 </span>
+						   </p>
+						 </div>
+					   </div>
+
+
+
+						  <div id="container">
+							<div class="wrap" style="width:300px; left:5%; float:left;">
+								<img src="media/research/Control.png" style="width:150px; height:130px;" alt="DTE">
+							  </a>
+							  <p <span style="color:rgba(255, 0, 0, 0.8);text-align:center;">Control</span> <br>
+								<span style="color:rgba(0, 0, 0, 0.8);">
+								  We establish data‑driven control strategies to modulate neural dynamics and steer brain states toward desired outcomes.
+								</span>
+							  </p>
+							</div>
+						  </div>
+
+							
+</div>
+<div style="clear: both;"></div>
+</ul>
+&nbsp;
+<p style="margin-bottom:2cm;"></p>			
+
+
+
+<h2>Publications:</h2>							
+<p>* Check out our list of publications in the <a href="https://scholar.google.com/citations?user=K6sMFj4AAAAJ&hl=en" target="_blank">Google Scholar Profile</a>.</p>
+<p style="margin-bottom:1.5cm;"></p>	
+
+
+<h2>Code Base:</h2>							
+<p>* Check out our public code base in our <a href="https://github.com/orgs/3sigmalab/" target="_blank">GitHub profile</a>.</p>
+<p style="margin-bottom:1.5cm;"></p>	
+
+
+<h2>Acknowledgement:</h2>			
+We thank the following organizations for sponsoring our research projects.		
+<ul>
+   <div style="width:1300px;">
+
+	<div id="container">
+		   <div class="wrap" style="width:200px; left:0%; float:left; text-align:center;">
+		   <a href="https://www.ou.edu" target="_blank"><img src="media/logos/OU.png" style="width:150px; height:50px; border-radius:10%; object-fit:contain;"/></a>
+	   </div>
+   </div>		
+   
+	<div id="container">
+			<div class="wrap" style="width:200px; left:0%; float:left; text-align:center;">
+			<a href="https://www.ouhealth.com/stephenson-cancer-center/" target="_blank"><img src="media/logos/SCC.png" style="width:150px; height:50px; border-radius:10%; object-fit:contain;"/></a>
+		</div>
+	</div>			
+	
+	<div id="container">
+			<div class="wrap" style="width:200px; left:0%; float:left; text-align:center;">
+			<a href="https://www.nih.gov/" target="_blank"><img src="media/logos/NIH.png" style="width:150px; height:50px; border-radius:10%; object-fit:contain;"/></a>
+		</div>
+	</div>		
+	
+	
+	</div>
+<div style="clear: both;"></div>
+</ul>
+&nbsp;
+
+<div id="teaching">
+<h1>Teaching</h1>
+
+            
+<div style="width:1300px;">
+
+<div id="container">
+			<div class="wrap" style="width:200px; left:5%; float:left; padding-bottom:10px; text-align:center;">
+			<a><img src="media/books/IHN.jpg" style="width:100px; height:150px;"  alt="DTE" /><a/>
+			<p>
+			  CS 4723/5723 (Neural Data Science) <br>
+			  OU (FA22, FA23, FA24, FA25)
+			</p>
+		</div>
+	</div>
+	
+<div id="container">
+			<div class="wrap" style="width:200px; left:5%; float:left; padding-bottom:10px; text-align:center;">
+			<a><img src="media/books/ILO.jpg" style="width:100px; height:150px;"  alt="DTE" /><a/>
+			<p>
+			  CS 4433/5433 (Linear Optimization) <br>
+			  OU (SP22, SP23, SP24, SP25, SP26)
+			</p>
+		</div>
+	</div>
+	
+<div id="container">
+		<div class="wrap" style="width:200px; left:5%; float:left; padding-bottom:10px; text-align:center;">
+		<a><img src="media/books/DS.jpg" style="width:100px; height:150px;"  alt="DTE" /><a/>
+		<p>
+		  CS 2813 (Discrete Structures) <br>
+		  OU (FA24, FA25)
+		</p>
+	</div>
+</div>
+
+<div style="clear: both;"></div>
+</ul>
+&nbsp;			
+<p style="margin-bottom:1cm;"></p>					
+
+
+
+
+    <div id="outreach">
+        <h1>Outreach</h1>
+		
+		<ul>
+		<div style="width:1300px;">
+			
+<div id="container">
+		<div class="wrap"style="width:600px; left:0%; float:left; text-align:center;">
+		<a><img src="media/events/ASD.jpeg" style="width:auto;height:250px;"  alt="DTE" /><a/>
+		<p>
+		  Admitted Student Day (FA24) <br>
+		  University of Oklahoma
+		</p>
+	</div>
+		</div>
+		
+<div id="container">
+			<div class="wrap"style="width:600px; left:-10%; float:left; text-align:center;">
+			<a><img src="media/events/SMO.jpg" style="width:auto;height:250px;"  alt="DTE" /><a/>
+			<p>
+			  Empathy Exhibition (FA22) <br>
+			  Science Museum Oklahoma
+			</p>
+		</div>
+			</div>
+			
+
+
+<div style="clear: both;"></div>
+</ul>
+&nbsp;			
+<p style="margin-bottom:2cm;"></p>		
+
+<div id="contact">
+<h1>Contact</h1>
+
+<i class="fas fa-at"></i>
+<div id="address">
+  sinakhan AT ou DOT edu<br>
+</div>
+
+<i class="fas fa-phone"></i>
+<div id="address">
+  (405) 325-1792<br>
+</div>
+
+<i class="fas fa-map-marker-alt"></i>
+<div id="address">
+  School of Computer Science,<br>
+  University of Oklahoma,<br>
+  110 W. Boyd Street,<br>
+  Devon Energy Hall,<br>
+  Room 210-A,<br>
+  Norman, OK 73019
+</div>
+
+<div class="span8">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.8271269901297!2d-97.44402318475399!3d35.21077478030667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b269d4244ae647%3A0xee193280b8b016ad!2sDevon%20Energy%20Hall%2C%20Norman%2C%20OK%2073019!5e0!3m2!1sen!2sus!4v1626317871814!5m2!1sen!2sus" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>             
+</div>
+
+
+
+<script src="index.js" type="text/javascript"></script>
+</body>
+</div>
 </html>
